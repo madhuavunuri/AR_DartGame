@@ -3,23 +3,11 @@
     "m_SelectedPackage": {
         "deviceId": "RFCR40FWYDD",
         "name": "com.NextGenGames.AR_Dart",
-        "processId": 32616,
+        "processId": 21867,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "RFCR40FWYDD",
-            "name": "com.NextGenGames.AR_Dart",
-            "processId": 5525,
-            "exited": true
-        },
-        {
-            "deviceId": "RFCR40FWYDD",
-            "name": "com.NextGenGames.AR_Dart",
-            "processId": 20468,
-            "exited": true
-        },
         {
             "deviceId": "RFCR40FWYDD",
             "name": "com.sec.android.app.launcher",
@@ -29,19 +17,43 @@
         {
             "deviceId": "RFCR40FWYDD",
             "name": "com.NextGenGames.AR_Dart",
-            "processId": 29094,
-            "exited": false
-        },
-        {
-            "deviceId": "RFCR40FWYDD",
-            "name": "com.NextGenGames.AR_Dart",
-            "processId": 32138,
-            "exited": false
-        },
-        {
-            "deviceId": "RFCR40FWYDD",
-            "name": "com.NextGenGames.AR_Dart",
             "processId": 32616,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCR40FWYDD",
+            "name": "com.NextGenGames.AR_Dart",
+            "processId": 3801,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCR40FWYDD",
+            "name": "com.NextGenGames.AR_Dart",
+            "processId": 13760,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCR40FWYDD",
+            "name": "com.NextGenGames.AR_Dart",
+            "processId": 14329,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCR40FWYDD",
+            "name": "com.NextGenGames.AR_Dart",
+            "processId": 16981,
+            "exited": true
+        },
+        {
+            "deviceId": "RFCR40FWYDD",
+            "name": "com.NextGenGames.AR_Dart",
+            "processId": 19566,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCR40FWYDD",
+            "name": "com.NextGenGames.AR_Dart",
+            "processId": 21867,
             "exited": false
         }
     ],

@@ -21,14 +21,18 @@ public class PlaceObjectOnPlanes : MonoBehaviour
     }
     void Update()
     {
-        UpdatePlacementIndicator();
         UpdatePlacementPosition();
+        UpdatePlacementIndicator();
+
     }
 
     void UpdatePlacementPosition()
     {
-        if (m_RaycastManager.Raycast(Camera.main.ViewportToScreenPoint(new Vector3(0.5f,0.5f)),s_Hits,TrackableType.PlaneWithinPolygon))
+        var screenCenter = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
+        if (m_RaycastManager.Raycast(screenCenter, s_Hits,TrackableType.PlaneWithinPolygon))
         {
+            placementPoseIsValid = s_Hits.Count > 0;
+
             if (placementPoseIsValid)
             {
                 placementPose = s_Hits[0].pose;
