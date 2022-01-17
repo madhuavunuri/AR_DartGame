@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
@@ -6,10 +7,13 @@ using UnityEngine.XR.ARSubsystems;
 public class PlaceObjectOnPlanes : MonoBehaviour
 {
     public GameObject placementIndicator;
+    public GameObject objectToPlace;
+
     
     Pose placementPose;
     Transform placementTransform;
     bool placementPoseIsValid = false;
+    bool isDartBoardPlaced = false;
     TrackableId placePlaneId = TrackableId.invalidId;
 
     ARRaycastManager m_RaycastManager;
@@ -24,10 +28,19 @@ public class PlaceObjectOnPlanes : MonoBehaviour
         UpdatePlacementPosition();
         UpdatePlacementIndicator();
 
+        if(placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            PlaceDartBoard();
+        }
     }
+
+   
 
     void UpdatePlacementPosition()
     {
+        if (isDartBoardPlaced)
+            return;
+
         var screenCenter = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         if (m_RaycastManager.Raycast(screenCenter, s_Hits,TrackableType.PlaneWithinPolygon))
         {
@@ -57,4 +70,12 @@ public class PlaceObjectOnPlanes : MonoBehaviour
             placementIndicator.SetActive(false);
         }
     }
+    void PlaceDartBoard()
+    {
+        Instantiate(objectToPlace, placementPose.position, placementTransform.rotation);
+        isDartBoardPlaced = true;
+        placementIndicator.SetActive(false);
+
+    }
+
 }

@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "RFCR40FWYDD",
         "name": "com.NextGenGames.AR_Dart",
-        "processId": 21867,
+        "processId": 22201,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -54,6 +54,12 @@
             "deviceId": "RFCR40FWYDD",
             "name": "com.NextGenGames.AR_Dart",
             "processId": 21867,
+            "exited": false
+        },
+        {
+            "deviceId": "RFCR40FWYDD",
+            "name": "com.NextGenGames.AR_Dart",
+            "processId": 22201,
             "exited": false
         }
     ],

@@ -610,3 +610,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placementIndicator: {fileID: 572894964}
+  objectToPlace: {fileID: 2943421204200904537, guid: 79dc54ef80592400bb0019da7256624b,
+    type: 3}
