@@ -19,18 +19,22 @@ public class PlaceObjectOnPlanes : MonoBehaviour
     ARRaycastManager m_RaycastManager;
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 
+    public static event Action onPlaceDartBoard;
     void Awake()
     {
         m_RaycastManager = GetComponent<ARRaycastManager>();        
     }
     void Update()
     {
-        UpdatePlacementPosition();
-        UpdatePlacementIndicator();
-
-        if(placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        if(!isDartBoardPlaced)
         {
-            PlaceDartBoard();
+            UpdatePlacementPosition();
+            UpdatePlacementIndicator();
+
+            if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                PlaceDartBoard();
+            }
         }
     }
 
@@ -73,9 +77,9 @@ public class PlaceObjectOnPlanes : MonoBehaviour
     void PlaceDartBoard()
     {
         Instantiate(objectToPlace, placementPose.position, placementTransform.rotation);
+        onPlaceDartBoard?.Invoke();
         isDartBoardPlaced = true;
         placementIndicator.SetActive(false);
-
     }
 
 }
