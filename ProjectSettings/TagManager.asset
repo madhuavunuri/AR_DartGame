@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - dart_board
+  - dart
+  - ar_session_origin
+  - dart_spawn_point
   layers:
   - Default
   - TransparentFX

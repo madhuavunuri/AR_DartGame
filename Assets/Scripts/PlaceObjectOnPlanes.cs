@@ -8,7 +8,6 @@ public class PlaceObjectOnPlanes : MonoBehaviour
 {
     public GameObject placementIndicator;
     public GameObject objectToPlace;
-
     
     Pose placementPose;
     Transform placementTransform;
@@ -22,7 +21,8 @@ public class PlaceObjectOnPlanes : MonoBehaviour
     public static event Action onPlaceDartBoard;
     void Awake()
     {
-        m_RaycastManager = GetComponent<ARRaycastManager>();        
+        if (TryGetComponent(out ARRaycastManager aRRaycast))
+            m_RaycastManager = aRRaycast;
     }
     void Update()
     {
